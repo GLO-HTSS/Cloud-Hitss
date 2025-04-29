@@ -10,7 +10,7 @@ const app = express();
 export const api = () => {  
   app.use(cors());
   app.use(express.json());
-  app.use("/BA", BA.Services);
+  app.use("/US", US.Services);
 }
 
 api();
