@@ -11,6 +11,9 @@ importers:
       concurrently:
         specifier: ^9.1.2
         version: 9.1.2
+      path-browserify:
+        specifier: ^1.0.1
+        version: 1.0.1
 
 packages:
 
@@ -63,6 +66,9 @@ packages:
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+  path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -160,6 +166,8 @@ snapshots:
   is-fullwidth-code-point@3.0.0: {}
 
   lodash@4.17.21: {}
+
+  path-browserify@1.0.1: {}
 
   require-directory@2.1.1: {}
 

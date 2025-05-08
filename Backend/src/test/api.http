@@ -1,32 +1,32 @@
 ### Obtener
 
 # Obtener infraestructura
-# GET http://localhost:3000/api/inf ✅
+GET http://localhost:3306/inf
 
 # Obtener seguridad
-# GET http://localhost:3000/api/safe ✅
+# GET http://localhost:3000/safe ✅
 
 # Obtener gestión
-# GET http://localhost:3000/api/mg ✅
+# GET http://localhost:3000/mg ✅
 
 # Obtener grupos
-# GET http://localhost:3000/api/gpo ✅
+# GET http://localhost:3000/gpo ✅
 
 # Obtener usuarios
-# GET http://localhost:3000/api/usr ✅
+# GET http://localhost:3000/usr ✅
 
 # Obtener miembros de grupo
-# GET http://localhost:3000/api/mgp ✅
+# GET http://localhost:3000/mgp ✅
 
 # Obtener proyectos
-# GET http://localhost:3000/api/pyt ✅
+# GET http://localhost:3000/pyt ✅
 
 ---
 
 ### Crear
 
 # Crear infraestructura
-POST http://localhost:3000/api/inf
+POST http://localhost:3000/inf
 Content-Type: application/json
 
 {
@@ -42,7 +42,7 @@ Content-Type: application/json
 }
 
 # Crear seguridad
-POST http://localhost:3000/api/safe
+POST http://localhost:3000/safe
 Content-Type: application/json
 
 {
@@ -57,7 +57,7 @@ Content-Type: application/json
 }
 
 # Crear gestión
-POST http://localhost:3000/api/mg
+POST http://localhost:3000/mg
 Content-Type: application/json
 
 {
@@ -72,7 +72,7 @@ Content-Type: application/json
 }
 
 # Crear grupo
-POST http://localhost:3000/api/gpo
+POST http://localhost:3000/gpo
 Content-Type: application/json
 
 {
@@ -80,7 +80,7 @@ Content-Type: application/json
 }
 
 # Crear usuario
-POST http://localhost:3000/api/usr
+POST http://localhost:3000/usr
 Content-Type: application/json
 
 {
@@ -91,7 +91,7 @@ Content-Type: application/json
 }
 
 # Crear miembro de grupo
-POST http://localhost:3000/api/mgp
+POST http://localhost:3000/mgp
 Content-Type: application/json
 
 {
@@ -100,7 +100,7 @@ Content-Type: application/json
 }
 
 # Crear proyecto
-POST http://localhost:3000/api/pyt
+POST http://localhost:3000/pyt
 Content-Type: application/json
 
 {

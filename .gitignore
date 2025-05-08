@@ -1,38 +1,40 @@
 # Node.js
-node_modules/
-npm-debug.log*
-pnpm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+node_modules/            # Carpeta de dependencias de Node.js
+npm-debug.log*          # Logs de depuración de npm
+pnpm-debug.log*         # Logs de depuración de pnpm
+yarn-debug.log*         # Logs de depuración de yarn
+yarn-error.log*         # Logs de error de yarn
+pnpm-lock.yaml          # Archivo de bloqueo de versiones de pnpm
 
 # Logs
-logs/
-*.log
-*.log.*
+logs/                   # Carpeta de logs
+*.log                   # Archivos de log
+*.log.*                # Archivos de log con extensiones adicionales
 
 # Build output
-dist/
-build/
+dist/                   # Carpeta de distribución
+build/                  # Carpeta de compilación
 
 # TypeScript
-*.tsbuildinfo
+*.tsbuildinfo          # Archivos de información de compilación de TypeScript
 
 # Environment variables
-.env
-.env.local
-.env.*.local
+.env                    # Variables de entorno
+.env.local             # Variables de entorno locales
+.env.*.local           # Variables de entorno locales con sufijos
 
 # IDEs and editors
-.vscode/
-.idea/
-*.swp
-*.swo
+.vscode/               # Configuración de Visual Studio Code
+.idea/                 # Configuración de JetBrains IDEs
+*.swp                  # Archivos temporales de Vim
+*.swo                  # Archivos temporales de Vim
 
 # Test coverage
-coverage/
+coverage/              # Carpeta de reportes de cobertura de pruebas
 
 # Temporary files
-*.tmp
-*.temp
-.DS_Store
-Thumbs.db
+*.tmp                  # Archivos temporales
+*.temp                 # Archivos temporales
+.DS_Store             # Archivos de sistema de macOS
+Thumbs.db             # Archivos de miniaturas de Windows
+node_modules

@@ -7,8 +7,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "build",
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": "./", // Asegura que las rutas sean relativas a la raíz del proyecto
+    "paths": {
+      "@hitss/*": ["Backend/src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.test.ts"],
   "exclude": ["node_modules"]
 }
+
