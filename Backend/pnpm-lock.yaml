@@ -31,7 +31,7 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.14.0
+        specifier: ^22.15.14
         version: 22.15.14
       '@types/supertest':
         specifier: ^6.0.3
