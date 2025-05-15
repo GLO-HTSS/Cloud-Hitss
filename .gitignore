@@ -5,6 +5,7 @@ pnpm-debug.log*         # Logs de depuración de pnpm
 yarn-debug.log*         # Logs de depuración de yarn
 yarn-error.log*         # Logs de error de yarn
 pnpm-lock.yaml          # Archivo de bloqueo de versiones de pnpm
+package-lock.json          # Archivo de bloqueo de versiones de pnpm
 
 # Logs
 logs/                   # Carpeta de logs
