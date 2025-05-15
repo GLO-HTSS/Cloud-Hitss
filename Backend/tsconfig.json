@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "composite": true,
     "outDir": "build",
     "rootDir": "src",
     "baseUrl": "./", // Asegura que las rutas sean relativas a la raíz del proyecto

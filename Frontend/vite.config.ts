@@ -1,14 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
+import { fileURLToPath } from "url";
+import * as path from "path";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   resolve: {
     alias: {
       "@hitss": path.resolve(__dirname, "../Backend/src"),
-      "@components": path.resolve(__dirname, "./src/components"),
-      "@styles": path.resolve(__dirname, "./src/styles"),
-      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@cmp": path.resolve(__dirname, "./src/components"),
+      "@stl": path.resolve(__dirname, "./src/styles"),
+      "@ast": path.resolve(__dirname, "./src/assets"),
+      "@pgs": path.resolve(__dirname, "./src/pages"),
     },
   },
   server: {
