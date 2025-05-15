@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/hitss-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <header class="head"></header>
+
+    <main>
+      <div class="flex flex-row gap-2">
+        <div class="w-4 h-4 rounded-full bg-red-500 animate-bounce"></div>
+        <div
+          class="w-4 h-4 rounded-full bg-red-500 animate-bounce [animation-delay:-.3s]"
+        ></div>
+        <div
+          class="w-4 h-4 rounded-full bg-red-500 animate-bounce [animation-delay:-.5s]"
+        ></div>
+      </div>
+
+      <div id="root"></div>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="@cmp/main.tsx"></script>
+  </body>
+</html>

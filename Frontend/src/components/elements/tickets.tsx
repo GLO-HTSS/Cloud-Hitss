@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/tickets.css";
 
 interface Proyecto {
@@ -89,9 +89,11 @@ export function Tickets() {
   }, []);
 
   // Función para obtener la abreviatura de la consola
+  // Función para obtener la abreviatura de la consola
   const getConsolaAbreviatura = (consola: string): string => {
     const abreviaturas: { [key: string]: string } = {
-      Azure: "AZR",
+      "Azure reseller": "AZR-R",
+      "Azure internal": "AZR-I",
       "Amazon Web Services": "AWS",
       "Google Cloud Platform": "GCP",
     };

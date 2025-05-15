@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sistema de gestión de tickets Cloud-Hitss"
+    />
+    <title>Cloud-Hitss - Gestión de Tickets</title>
+    <link rel="stylesheet" href="../styles/info-tick.css" />
+    <link rel="stylesheet" href="../styles/form-handler.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-main"></nav>
+    </header>
+
+    <main class="main-content">
+      <div class="inpt-push" id="mgp">
+        <!-- Formulario de Grupos -->
+        <form action="/grupos/guardar" method="POST">
+          <legend>Gestión de Grupos</legend>
+
+          <label for="nombre_grupo">Nombre del Grupo</label>
+          <input type="text" id="nombre_grupo" name="nombre_grupo" required />
+
+          <label for="miembros">Miembros (selección múltiple)</label>
+          <select id="miembros" name="miembros[]" multiple size="5">
+            <!-- Opciones generadas dinámicamente -->
+          </select>
+
+          <button type="submit">Guardar Grupo</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="mpt">
+        <!-- Formulario de Proyectos -->
+        <form action="/proyectos/guardar" method="POST">
+          <legend>Gestión de Proyectos</legend>
+
+          <label for="pais_sede">País sede</label>
+          <input type="text" id="pais_sede" name="pais_sede" required />
+
+          <label for="proposito_maquina">Propósito de la máquina</label>
+          <textarea id="proposito_maquina" name="proposito_maquina"></textarea>
+
+          <label for="gerente_proyecto">Gerente de proyecto</label>
+          <input type="text" id="gerente_proyecto" name="gerente_proyecto" />
+
+          <label for="proyecto_asignado">Proyecto asignado</label>
+          <input type="text" id="proyecto_asignado" name="proyecto_asignado" />
+
+          <label for="nombre_proyecto_cloud">Nombre en Cloud</label>
+          <input
+            type="text"
+            id="nombre_proyecto_cloud"
+            name="nombre_proyecto_cloud"
+          />
+
+          <label for="id_proyecto_cloud">ID en Cloud</label>
+          <input type="text" id="id_proyecto_cloud" name="id_proyecto_cloud" />
+
+          <label for="fecha_inicio">Fecha inicio</label>
+          <input type="date" id="fecha_inicio" name="fecha_inicio" />
+
+          <label for="fecha_final">Fecha final</label>
+          <input type="date" id="fecha_final" name="fecha_final" />
+
+          <label for="administracion_servicio"
+            >Administración de servicio</label
+          >
+          <input
+            type="text"
+            id="administracion_servicio"
+            name="administracion_servicio"
+          />
+
+          <label for="usuario_rel">Usuario responsable</label>
+          <select id="usuario_rel" name="usuario_rel">
+            <!-- Opciones dinámicas -->
+          </select>
+
+          <label for="gestion_rel">Gestión relacionada</label>
+          <select id="gestion_rel" name="gestion_rel">
+            <!-- Opciones dinámicas -->
+          </select>
+
+          <label for="infraestructura_rel">Infraestructura</label>
+          <select id="infraestructura_rel" name="infraestructura_rel">
+            <!-- Opciones dinámicas -->
+          </select>
+
+          <label for="seguridad_rel">Seguridad</label>
+          <select id="seguridad_rel" name="seguridad_rel">
+            <!-- Opciones dinámicas -->
+          </select>
+
+          <button type="submit">Guardar Proyecto</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="mif">
+        <!-- Formulario de Gestión Técnica -->
+        <form action="/gestion/guardar" method="POST">
+          <legend>Gestión Técnica</legend>
+
+          <label for="ticket">Ticket</label>
+          <input type="text" id="ticket" name="ticket" />
+
+          <label for="mantenimientos">Mantenimientos</label>
+          <textarea id="mantenimientos" name="mantenimientos"></textarea>
+
+          <label for="credenciales">Credenciales</label>
+          <textarea id="credenciales" name="credenciales"></textarea>
+
+          <label for="billing">Billing</label>
+          <textarea id="billing" name="billing"></textarea>
+
+          <label for="estimacion_mensual">Estimación mensual</label>
+          <input
+            type="number"
+            id="estimacion_mensual"
+            name="estimacion_mensual"
+            step="0.01"
+          />
+
+          <label for="presupuesto_aprobado">Presupuesto aprobado</label>
+          <input
+            type="number"
+            id="presupuesto_aprobado"
+            name="presupuesto_aprobado"
+            step="0.01"
+          />
+
+          <label for="duracion_uso">Duración de uso</label>
+          <input type="text" id="duracion_uso" name="duracion_uso" />
+
+          <label for="observaciones">Observaciones</label>
+          <textarea id="observaciones" name="observaciones"></textarea>
+
+          <button type="submit">Guardar Gestión</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="inf">
+        <!-- Formulario de Infraestructura -->
+        <form action="/infraestructura/guardar" method="POST">
+          <legend>Infraestructura</legend>
+
+          <label for="consola">Consola</label>
+          <select id="consola" name="consola">
+            <option>Azure internal</option>
+            <option>Azure reseller</option>
+            <option>Google Cloud Platform</option>
+            <option>AWS</option>
+            <option>Oracle Cloud Infrastructure</option>
+            <option>Other</option>
+          </select>
+
+          <label for="sistema_operativo">Sistema operativo</label>
+          <input type="text" id="sistema_operativo" name="sistema_operativo" />
+
+          <label for="memoria">Memoria</label>
+          <input type="text" id="memoria" name="memoria" />
+
+          <label for="disco">Disco</label>
+          <input type="text" id="disco" name="disco" />
+
+          <label for="cpu">CPU</label>
+          <input type="text" id="cpu" name="cpu" />
+
+          <label for="ram">RAM</label>
+          <input type="text" id="ram" name="ram" />
+
+          <label for="disco_arranque">Disco de arranque</label>
+          <input type="text" id="disco_arranque" name="disco_arranque" />
+
+          <label for="discos_adicionales">Discos adicionales</label>
+          <textarea
+            id="discos_adicionales"
+            name="discos_adicionales"
+          ></textarea>
+
+          <label for="nics">NICs</label>
+          <textarea id="nics" name="nics"></textarea>
+
+          <button type="submit">Guardar Infraestructura</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="seg">
+        <!-- Formulario de Seguridad -->
+        <form action="/seguridad/guardar" method="POST">
+          <legend>Seguridad</legend>
+
+          <label for="respaldos">Respaldos</label>
+          <textarea id="respaldos" name="respaldos"></textarea>
+
+          <label for="acceso_iam">Acceso IAM</label>
+          <textarea id="acceso_iam" name="acceso_iam"></textarea>
+
+          <label for="autenticacion_adicional">Autenticación adicional</label>
+          <textarea
+            id="autenticacion_adicional"
+            name="autenticacion_adicional"
+          ></textarea>
+
+          <label for="reglas_firewall">Reglas de Firewall</label>
+          <textarea id="reglas_firewall" name="reglas_firewall"></textarea>
+
+          <label for="balanceador_carga">Balanceador de Carga</label>
+          <textarea id="balanceador_carga" name="balanceador_carga"></textarea>
+
+          <label for="llaves_ssh">Llaves SSH</label>
+          <textarea id="llaves_ssh" name="llaves_ssh"></textarea>
+
+          <label for="monitoreo">Monitoreo</label>
+          <textarea id="monitoreo" name="monitoreo"></textarea>
+
+          <label for="alertas_configuradas">Alertas configuradas</label>
+          <textarea
+            id="alertas_configuradas"
+            name="alertas_configuradas"
+          ></textarea>
+
+          <button type="submit">Guardar Seguridad</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="pro">
+        <form class="proyecto-form">
+          <h2>Información del Proyecto</h2>
+
+          <div class="form-group">
+            <label for="pais_sede">País Sede:</label>
+            <input
+              type="text"
+              id="pais_sede"
+              name="pais_sede"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="proposito_maquina">Propósito de la Máquina:</label>
+            <input
+              type="text"
+              id="proposito_maquina"
+              name="proposito_maquina"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="gerente_proyecto">Gerente del Proyecto:</label>
+            <input
+              type="text"
+              id="gerente_proyecto"
+              name="gerente_proyecto"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="proyecto_asignado">Proyecto Asignado:</label>
+            <input
+              type="text"
+              id="proyecto_asignado"
+              name="proyecto_asignado"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="nombre_proyecto_cloud">Nombre Proyecto Cloud:</label>
+            <input
+              type="text"
+              id="nombre_proyecto_cloud"
+              name="nombre_proyecto_cloud"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="fecha_inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required />
+          </div>
+
+          <div class="form-group">
+            <label for="fecha_final">Fecha Final:</label>
+            <input type="date" id="fecha_final" name="fecha_final" required />
+          </div>
+
+          <div class="form-group">
+            <label for="administracion_servicio"
+              >Administración del Servicio:</label
+            >
+            <input
+              type="text"
+              id="administracion_servicio"
+              name="administracion_servicio"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-submit">Guardar Proyecto</button>
+        </form>
+      </div>
+
+      <div class="inpt-push" id="usr">
+        <form class="usuario-form">
+          <h2>Información del Usuario</h2>
+
+          <div class="form-group">
+            <label for="id_usuario">ID Usuario:</label>
+            <input type="number" id="id_usuario" name="id_usuario" required />
+          </div>
+
+          <div class="form-group">
+            <label for="responsable_tecnico">Responsable Técnico:</label>
+            <input
+              type="text"
+              id="responsable_tecnico"
+              name="responsable_tecnico"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="solicitante">Solicitante:</label>
+            <input
+              type="text"
+              id="solicitante"
+              name="solicitante"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="admin_responsable">Administrador Responsable:</label>
+            <input
+              type="text"
+              id="admin_responsable"
+              name="admin_responsable"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="operador">Operador:</label>
+            <input
+              type="text"
+              id="operador"
+              name="operador"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-submit">Guardar Usuario</button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="../js/form-init.js"></script>
+  </body>
+</html>
