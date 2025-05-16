@@ -39,3 +39,4 @@ coverage/              # Carpeta de reportes de cobertura de pruebas
 .DS_Store             # Archivos de sistema de macOS
 Thumbs.db             # Archivos de miniaturas de Windows
 node_modules
+Frontend_asdas
